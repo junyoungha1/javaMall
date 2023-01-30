@@ -80,7 +80,11 @@ public class MemberBoard implements MenuCommand {
 			return;
 		}
 		bdao.printMyBoardList(myBoardList);
-		int sel = Util.getValue("번호 선택", 1, myBoardList.size());
+		System.out.println("0) 뒤로가기");
+		int sel = Util.getValue("번호 선택", 0, myBoardList.size());
+		if (sel == 0) {
+			return;
+		}
 		fdao.loadFile(myBoardList.get(--sel).getfileName(), "AllUser");
 		removeBoard(myBoardList, sel);
 	}
