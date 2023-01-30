@@ -19,6 +19,7 @@ public class MallMain implements MenuCommand {
 		int sel = Util.getValue("메뉴 입력", 0, 2);
 		if (sel == 0) {
 			System.out.println("[ 프로그램 종료 ]");
+			mallCont.setNext(null);
 			return false;
 		}
 
