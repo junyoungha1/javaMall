@@ -19,15 +19,13 @@ public class MallMain implements MenuCommand {
 		int sel = Util.getValue("메뉴 입력", 0, 2);
 		if (sel == 0) {
 			System.out.println("[ 프로그램 종료 ]");
-			return false;
+			return true;
 		}
 
 		if (sel == 1) {
 			mallCont.setNext("MallJoin");
 		} else if (sel == 2) {
 			mallCont.setNext("MallLogin");
-		} else {
-			return true;
 		}
 
 		return false;
