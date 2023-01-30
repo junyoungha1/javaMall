@@ -66,7 +66,9 @@ public class MemberBoard implements MenuCommand {
 		if (sel == 0) {
 			return;
 		}
+		System.out.println("===================================");
 		fdao.loadFile(boardList.get(--sel).getfileName(), "AllUser");
+		System.out.println("===================================");
 		if (!boardList.get(sel).getId().equals(mallCont.getLoginId())) {
 			int hits = boardList.get(sel).getHits();
 			bdao.getBoardList().get(sel).setHits(++hits);
@@ -85,7 +87,9 @@ public class MemberBoard implements MenuCommand {
 		if (sel == 0) {
 			return;
 		}
+		System.out.println("===================================");
 		fdao.loadFile(myBoardList.get(--sel).getfileName(), "AllUser");
+		System.out.println("===================================");
 		removeBoard(myBoardList, sel);
 	}
 

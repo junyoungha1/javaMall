@@ -47,8 +47,9 @@ public class AdminBoard implements MenuCommand {
 		}
 		String filename = files[--sel].toString().substring(8 + foldername.length() + 1);
 		filename = filename.substring(0, filename.length() - 4);
+		System.out.println("===================================");
 		fdao.loadFile(filename, foldername);
-
+		System.out.println("===================================");
 		System.out.println("[1] 삭제 [0] 뒤로가기");
 		sel = Util.getValue("메뉴 선택", 0, 1);
 		if (sel == 1) {
