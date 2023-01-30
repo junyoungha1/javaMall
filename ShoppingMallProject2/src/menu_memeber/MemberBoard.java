@@ -108,7 +108,9 @@ public class MemberBoard implements MenuCommand {
 					String addPost = Util.getValue("내용 작성");
 					post += addPost;
 				} else if (sel == 2) {
-					post = post.substring(0, post.length() - 1);
+					if (post.length() != 0) {
+						post = post.substring(0, post.length() - 1);
+					}
 				} else if (sel == 3) {
 					fdao.saveFile(myBoardList.get(boardIdx).getfileName(), mallCont.getLoginId(), post);
 					fdao.saveFile(myBoardList.get(boardIdx).getfileName(), "AllUser", post);
