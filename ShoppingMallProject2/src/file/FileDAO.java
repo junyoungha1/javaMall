@@ -110,7 +110,7 @@ public class FileDAO {
 		System.out.println(data);
 	}
 
-	void deleteFile(String fileName) {
+	public void deleteFile(String fileName) {
 		Path path = Paths.get("src/게시판/AllUser/" + fileName + ".txt");
 		try {
 			Files.delete(path);

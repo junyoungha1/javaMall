@@ -87,7 +87,7 @@ public class MemberBoard implements MenuCommand {
 
 	void removeBoard(ArrayList<Board> myBoardList, int select) {
 		System.out.println("[1] 수정 [2] 삭제 [0] 뒤로가기");
-		int sel = Util.getValue("메뉴 선택", 0, 1);
+		int sel = Util.getValue("메뉴 선택", 0, 2);
 		if (sel == 0) {
 			return;
 		}
@@ -95,6 +95,7 @@ public class MemberBoard implements MenuCommand {
 		if (sel == 1) {
 		} else if (sel == 2) {
 			bdao.deleteBoard(boardIdx);
+			fdao.deleteFile(myBoardList.get(select).getfileName());
 			System.out.println("게시물이 삭제되었습니다");
 		}
 	}
