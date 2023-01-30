@@ -19,7 +19,7 @@ public class MemberInfo implements MenuCommand {
 	public boolean update() {
 		System.out.println("=====[ 내 정보 ] =====");
 		mdao.printMember(mallCont.getLoginId());
-		System.out.println("[1] 비밀번호 변경 [2]회원탈퇴 [0] 뒤로가기");
+		System.out.println("[1] 비밀번호 변경 [2] 회원탈퇴 [0] 뒤로가기");
 		int sel = Util.getValue("메뉴 입력", 0, 2);
 		if (sel == 0) {
 			mallCont.setNext("MemberMain");
