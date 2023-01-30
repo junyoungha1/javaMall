@@ -22,7 +22,7 @@ public class MemberQuit implements MenuCommand{
 		String pw = Util.getValue("[ 회원탈퇴 ] PW : ");
 		if (mdao.checkMember(id, pw)) {
 			mdao.deleteMember(id);
-			System.out.println("[ [ 회원탈퇴 ] 완료 ]");
+			System.out.println("[ 회원탈퇴 ] 완료");
 		} else {
 			System.err.println("비밀번호가 일치하지 않습니다");
 			return true;
