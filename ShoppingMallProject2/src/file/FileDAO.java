@@ -110,8 +110,10 @@ public class FileDAO {
 		return data;
 	}
 
+
 	public void deleteFile(String folderName, String fileName) {
 		Path path = Paths.get("src/게시판/" + folderName + "/" + fileName + ".txt");
+
 		try {
 			Files.deleteIfExists(path);
 		} catch (IOException e) {

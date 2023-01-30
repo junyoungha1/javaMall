@@ -61,6 +61,7 @@ public class MemberBoard implements MenuCommand {
 		if (sel == 0) {
 			return;
 		}
+
 		System.out.println("===================================");
 		fdao.loadFile(boardList.get(--sel).getfileName(), "AllUser");
 		System.out.println("===================================");

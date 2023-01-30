@@ -27,7 +27,7 @@ public class MallMain implements MenuCommand {
 			mallCont.setNext("MallJoin");
 		} else if (sel == 2) {
 			mallCont.setNext("MallLogin");
-		}
+		} 
 
 		return false;
 	}

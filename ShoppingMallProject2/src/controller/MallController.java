@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import _mall.MenuCommand;
+import board.Board;
+
 import board.BoardDAO;
 import cart.CartDAO;
 import file.FileDAO;
