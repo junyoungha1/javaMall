@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import _mall.MenuCommand;
+import board.BoardDAO;
 import cart.CartDAO;
 import file.FileDAO;
 import item.ItemDAO;
@@ -60,6 +61,7 @@ public class MallController {
 		FileDAO.getInstance().init();
 		ItemDAO.getInstance().init();
 		CartDAO.getInstance().init();
+		BoardDAO.getInstance().init();
 		
 		mapCont.put("MallMain", new MallMain());
 		mapCont.put("MallJoin", new MallJoin());

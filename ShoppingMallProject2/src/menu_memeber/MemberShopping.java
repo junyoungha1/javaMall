@@ -16,7 +16,6 @@ public class MemberShopping implements MenuCommand {
 	public void init() {
 		mallCont = MallController.getInstance();
 		idao = ItemDAO.getInstance();
-		idao.init();
 		category = null;
 	}
 
