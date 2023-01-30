@@ -13,7 +13,6 @@ public class MemberInfo implements MenuCommand {
 	public void init() {
 		mallCont = MallController.getInstance();
 		mdao = MemberDAO.getInstance();
-		mdao.init();
 	}
 
 	@Override
