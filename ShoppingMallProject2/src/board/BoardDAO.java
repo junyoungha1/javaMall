@@ -1,5 +1,6 @@
 package board;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class BoardDAO {
@@ -24,8 +25,13 @@ public class BoardDAO {
 		return ++num;
 	}
 
-	public void addBoard(Board board) {
-		boardList.add(board);
+	public void addBoard(String filename, String id) {
+		Board b = new Board();
+		b.setfileName(filename);
+		b.setId(id);
+		b.setHits(0);
+		b.setDate(LocalDate.now().toString());
+		boardList.add(b);
 	}
 
 	public void deleteBoard(int idx) {
@@ -75,4 +81,5 @@ public class BoardDAO {
 		}
 	}
 
+	
 }

@@ -54,9 +54,11 @@ public class AdminBoard implements MenuCommand {
 		sel = Util.getValue("메뉴 선택", 0, 1);
 		if (sel == 1) {
 			bdao.deleteBoard(bdao.getBoardIdx(filename, bdao.getBoardList()));
+			fdao.deleteFile(foldername, filename);
+			fdao.deleteFile("AllUser", filename);
 			System.out.println("게시글이 삭제되었습니다");
 		}
-		
+
 		mallCont.setNext("AdminMain");
 
 		return false;

@@ -9,7 +9,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-
 public class FileDAO {
 	private FileDAO() {
 	}
@@ -80,7 +79,7 @@ public class FileDAO {
 		}
 	}
 
-	public void loadFile(String fileName, String id) {
+	public String loadFile(String fileName, String id) {
 		String path = "src/게시판/" + id + "/" + fileName + ".txt";
 		String data = "";
 		try {
@@ -108,10 +107,11 @@ public class FileDAO {
 			}
 		}
 		System.out.println(data);
+		return data;
 	}
 
-	void deleteFile(String fileName) {
-		Path path = Paths.get("src/게시판/AllUser/" + fileName + ".txt");
+	public void deleteFile(String folderName, String fileName) {
+		Path path = Paths.get("src/게시판/" + folderName + "/" + fileName + ".txt");
 		try {
 			Files.delete(path);
 		} catch (IOException e) {
