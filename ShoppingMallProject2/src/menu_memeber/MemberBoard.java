@@ -61,7 +61,11 @@ public class MemberBoard implements MenuCommand {
 			return;
 		}
 		bdao.printBoardList();
-		int sel = Util.getValue("번호 선택", 1, boardList.size());
+		System.out.println("0) 뒤로가기");
+		int sel = Util.getValue("번호 선택", 0, boardList.size());
+		if (sel == 0) {
+			return;
+		}
 		fdao.loadFile(boardList.get(--sel).getfileName(), "AllUser");
 		if (!boardList.get(sel).getId().equals(mallCont.getLoginId())) {
 			int hits = boardList.get(sel).getHits();
