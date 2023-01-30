@@ -19,9 +19,7 @@ public class MemberBoard implements MenuCommand {
 	public void init() {
 		mallCont = MallController.getInstance();
 		bdao = BoardDAO.getInstance();
-		bdao.init();
 		fdao = FileDAO.getInstance();
-		fdao.init();
 	}
 
 	@Override
