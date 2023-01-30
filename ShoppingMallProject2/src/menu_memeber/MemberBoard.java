@@ -90,7 +90,7 @@ public class MemberBoard implements MenuCommand {
 
 	void boardMenu(ArrayList<Board> myBoardList, int select) {
 		System.out.println("[1] 수정 [2] 삭제 [0] 뒤로가기");
-		int sel = Util.getValue("메뉴 선택", 0, 1);
+		int sel = Util.getValue("메뉴 선택", 0, 2);
 		if (sel == 0) {
 			return;
 		}
