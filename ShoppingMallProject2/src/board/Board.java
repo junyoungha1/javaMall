@@ -51,7 +51,7 @@ public class Board {
 
 	@Override
 	public String toString() {
-		return "제목 : " + fileName + "\t 작성자 : " + id + "\t 날짜 : " + date + "\t 조회수 : " + hits + "]";
+		return "제목 : " + fileName + "\t 작성자 : " + id + "\t 날짜 : " + date + "\t 조회수 : " + hits;
 	}
 
 }
