@@ -19,6 +19,8 @@ public class AdminItem implements MenuCommand {
 		mallCont = MallController.getInstance();
 		idao = ItemDAO.getInstance();
 		cdao = CartDAO.getInstance();
+		idao.init();
+		cdao.init();
 	}
 
 	@Override

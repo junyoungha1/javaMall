@@ -19,6 +19,8 @@ public class AdminBoard implements MenuCommand {
 		mallCont = MallController.getInstance();
 		bdao = BoardDAO.getInstance();
 		fdao = FileDAO.getInstance();
+		bdao.init();
+		fdao.init();
 		files = null;
 	}
 

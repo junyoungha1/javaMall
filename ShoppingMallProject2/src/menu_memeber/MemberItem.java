@@ -22,6 +22,8 @@ public class MemberItem implements MenuCommand {
 		category = MemberShopping.category;
 		idao = ItemDAO.getInstance();
 		cdao = CartDAO.getInstance();
+		idao.init();
+		cdao.init();
 	}
 
 	@Override

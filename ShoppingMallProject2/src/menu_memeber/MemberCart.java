@@ -16,6 +16,7 @@ public class MemberCart implements MenuCommand {
 	public void init() {
 		mallCont = MallController.getInstance();
 		cdao = CartDAO.getInstance();
+		cdao.init();
 	}
 
 	@Override
