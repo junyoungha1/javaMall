@@ -3,21 +3,18 @@ package menu_admin;
 import java.io.File;
 
 import _mall.MenuCommand;
-import board.BoardDAO;
 import controller.MallController;
 import file.FileDAO;
 import util.Util;
 
 public class AdminBoard implements MenuCommand {
 	private MallController mallCont;
-	private BoardDAO bdao;
 	private FileDAO fdao;
 	File[] files;
 
 	@Override
 	public void init() {
 		mallCont = MallController.getInstance();
-		bdao = BoardDAO.getInstance();
 		fdao = FileDAO.getInstance();
 		files = null;
 	}
@@ -55,7 +52,7 @@ public class AdminBoard implements MenuCommand {
 		if (sel == 1) {
 			fdao.deleteFile(foldername, filename);
 			fdao.deleteFile("AllUser", filename);
-			System.out.println("게시글이 삭제되었습니다");
+			System.out.println("파일이 삭제되었습니다");
 		}
 
 		mallCont.setNext("AdminMain");
