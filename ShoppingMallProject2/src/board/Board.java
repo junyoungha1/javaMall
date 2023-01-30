@@ -11,10 +11,10 @@ public class Board {
 
 	public Board(String id, String date, int hits, String fileName) {
 		super();
+		this.fileName = fileName;
 		this.id = id;
 		this.date = date;
 		this.hits = hits;
-		this.fileName = fileName;
 	}
 
 	public String getfileName() {
